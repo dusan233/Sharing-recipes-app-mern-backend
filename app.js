@@ -12,7 +12,7 @@ const authRoutes = require("./routes/auth");
 const recipeRoutes = require("./routes/recipes");
 const userRoutes = require("./routes/user");
 
-let port = 8080;
+let port = process.env.PORT || 8080;
 
 const fileStorage = multer.diskStorage({
   destination: function (req, file, cb) {
